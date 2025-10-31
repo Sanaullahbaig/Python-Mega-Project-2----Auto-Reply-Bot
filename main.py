@@ -7,7 +7,7 @@ import google.generativeai as genai
 pyautogui.click(956, 1045)
 time.sleep(2)
 
-def is_last_message_from_sender(chat_log, sender_name = "+92 346 1978032"):
+def is_last_message_from_sender(chat_log, sender_name = "SENDER_NAME_HERE"):
     # Split each chat log into individual messages 
     messages = chat_log.strip().split("/2025] ")[-1]
     if sender_name in messages:
@@ -17,7 +17,7 @@ def is_last_message_from_sender(chat_log, sender_name = "+92 346 1978032"):
 
 while True:
     # Configure Gemini with your Google API key
-    genai.configure(api_key="AIzaSyBM14vRkb86-2ZwQKEo9RfQLaGIHRpvOb8")
+    genai.configure(api_key="API_KEY_HERE")
 
     # Step 2: Drag the mouse from (900, 289) to (1713, 902) to select the text
     pyautogui.moveTo(900, 289)
@@ -54,4 +54,5 @@ while True:
         pyautogui.hotkey('ctrl', 'v')
 
         # Step 7: Press Enter
+
         pyautogui.press('enter')
